@@ -34,7 +34,6 @@
 
   - name: RSysLog | Restart service
     service: name=rsyslog state=restarted enabled=yes
-    with_items: "{{rsyslog_confd_parts | default([])}}"
     when: docker_test is not defined
     become: yes
     tags:
