@@ -1,0 +1,11 @@
+---
+# defaults file for sa-rsyslog-server
+
+rsyslog_conf_required_props:
+   - {regexp: '^[#]?module(load="imudp")', line: 'module(load="imudp")'}
+   - {regexp: '^[#]?input(type="imudp" port="514")', line: 'input(type="imudp" port="514")'}
+   - {regexp: '^[#]?module(load="imtcp")', line: 'module(load="imtcp")'}
+   - {regexp: '^[#]?input(type="imtcp" port="514")', line: 'input(type="imtcp" port="514")'}
+   - {regexp: '^[#]?$IncludeConfig /etc/rsyslog.d/*.conf', line: '$IncludeConfig /etc/rsyslog.d/*.conf'}
+
+

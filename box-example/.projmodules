@@ -1,0 +1,4 @@
+[submodule "roles/sa-rsyslog-server"]
+        path = roles/sa-rsyslog-server
+        url = https://github.com/softasap/sa-rsyslog-server.git
+
